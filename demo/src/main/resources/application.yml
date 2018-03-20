@@ -1,3 +1,15 @@
+#测试获取配置文件中字符串
+cupSize: B
+#测试获取配置文件中获取数字
+age: 18
+#测试在配置中获取配置属性
+content: "cupSize: ${cupSize} age: ${age}"
+#测试配置属性获取
+gril:
+   cupSize: B
+   age: 18
+
+
 spring:
   profiles:
     active: dev  #使用dev配置文件 或者prod 可使用java命令直接启动

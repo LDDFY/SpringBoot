@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController //等同于 @Controller+@ResponseBody
 public class HelloController {
 
     @Value("${cupSize}")
@@ -37,4 +37,3 @@ public class HelloController {
         return girlProperties.toString();
     }
 }
-dddddddddd

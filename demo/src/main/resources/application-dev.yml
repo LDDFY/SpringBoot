@@ -5,13 +5,18 @@
 server:
   port: 8081
 
-#测试获取配置文件中字符串
-cupSize: F
-#测试获取配置文件中获取数字
-age: 20
-#测试在配置中获取配置属性
-content: "cupSize: ${cupSize} age: ${age}"
-#测试配置属性获取
-gril:
-   cupSize: C
-   age: 19
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      #使用Jpa生成数据库字段名称规范驼峰/下划线
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
